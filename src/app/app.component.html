@@ -1,0 +1,37 @@
+<h1>Tour of Heroes</h1>
+<!-- <app-hero-main [hero]="hero"></app-hero-main>
+<app-hero-child2></app-hero-child2> -->
+
+<hr />
+<!-- multi-slot content projection -->
+<app-zippy-projectas>
+  <p>Let's learn about content projection!</p>
+  <!-- #docregion ngprojectas-->
+  <!-- question is specified in ng-content => defines where content should be projected into -->
+  <ng-container question>
+    <p>Is content projection cool? {{ question }}</p>
+  </ng-container>
+  <!-- #enddocregion-->
+</app-zippy-projectas>
+
+<div>
+  <ul>
+    <li><a routerLink="/view-child" routerLinkActive="active" ariaCurrentWhenActive="page">Learn View Child</a></li>
+    <li><a routerLink="/content-child" routerLinkActive="active" ariaCurrentWhenActive="page">Learn Content Child</a></li>
+    <li><a routerLink="/event-emitter" routerLinkActive="active" ariaCurrentWhenActive="page">Learn Event Emitter</a></li>
+    <li><a routerLink="/routing" routerLinkActive="active" ariaCurrentWhenActive="page">Learn Routing</a></li>
+    <li><a routerLink="/in-memory-db" routerLinkActive="active" ariaCurrentWhenActive="page">In Memory DB</a></li>
+    <li><a routerLink="/host" routerLinkActive="active" ariaCurrentWhenActive="page">Host Listener/Binding</a></li>
+    <li><a routerLink="/renderer" routerLinkActive="active" ariaCurrentWhenActive="page">Learn Renderer 2</a></li>
+  </ul>
+</div>
+<router-outlet></router-outlet>
+<!-- <content-projection></content-projection> -->
+
+<!-- <view-child></view-child> -->
+
+<!-- Event Emitters -->
+<!-- <event-emitter></event-emitter> -->
+
+<!-- Forms -->
+<!-- <form-learn></form-learn> -->
