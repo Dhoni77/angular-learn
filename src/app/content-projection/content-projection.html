@@ -1,0 +1,44 @@
+<style>
+    .b-need {
+        border: 2px solid red;
+    }
+</style>
+<!-- Content Children -->
+<needs-content #nc class="b-need">
+    <child-1 #content text="My"></child-1>
+    <child-2 #content text="dog"></child-2>
+    <child-2 text="has"></child-2>
+    <child-3 #content prop="fleas"></child-3>
+    <div #content>!</div>
+  </needs-content>
+
+<!-- content children 2 -->
+<p>Query descendants</p>
+<needs-query-desc text="2">
+    <div text="3">
+        HI
+        <div text="4"></div>
+    </div>
+</needs-query-desc>
+
+<!-- content children 3 -->
+<needs-query-by-ref-bindings #q>
+<div text="one" #textLabel1="textDir"></div>
+<div text="two" #textLabel2="textDir"></div>
+</needs-query-by-ref-bindings>
+
+<!-- 4 -->
+<parent></parent>
+
+<!-- viewChild -->
+<view-comp></view-comp>
+
+<local-ref-query-component>
+    <view-comp #contentQuery></view-comp>
+</local-ref-query-component>
+
+<!-- host listener -->
+<parent-host></parent-host>
+
+<!-- card with title -->
+<card-with-title></card-with-title>

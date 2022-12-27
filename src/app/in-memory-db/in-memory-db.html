@@ -1,0 +1,20 @@
+<div>
+    <p>Display Fruits from local db.</p>
+    <ul>
+        <li *ngFor="let p of peoples">
+            <span class="badge">{{ p.id || -1 }}</span>
+            <span *ngIf="p!==editPeople; else editInput" class="name">{{p.name}}</span>
+            <ng-template #editInput>
+              <input #peopleEditInput type="text" class="name" [value]="editPeople!.name" (blur)="edit(peopleEditInput.value)" (keydown.enter)="edit(peopleEditInput.value)"/>
+            </ng-template>
+            <button *ngIf="p!==editPeople" type="button"
+              (click)="editPeople = p">
+              Edit
+            </button>
+            <button type="submit" (click)="deletePeople(p.id)">Delete</button>
+        </li>
+    </ul>
+    <label for="p-name">p name: </label>
+    <input type="text" [(ngModel)]="peopleName" id="p-name">
+    <button type="submit" (click)="addPeople(peopleName)" [disabled]="!peopleName">Add people</button>
+</div>
